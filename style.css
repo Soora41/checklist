@@ -34,7 +34,7 @@ body {
 }
 
 .glow {
-    text-shadow: 0 0 12px #00ff88;
+    text-shadow: 0 0 12px #A020F0;
 }
 
 .card {
@@ -58,7 +58,7 @@ body {
 .task input {
     width: 22px;
     height: 22px;
-    accent-color: #00ff88;
+    accent-color: #A020F0;
 }
 
 .progress-bar-bg {
@@ -71,7 +71,7 @@ body {
 .progress-bar-fill {
     height: 10px;
     width: 0%;
-    background: #00ff88;
+    background: #A020F0;
     border-radius: 20px;
     transition: width 0.4s ease;
 }
@@ -98,8 +98,8 @@ body {
 
 .achievement.unlocked {
     opacity: 1;
-    border-color: #00ff88;
-    box-shadow: 0 0 12px #00ff8855;
+    border-color: #A020F0;
+    box-shadow: 0 0 12px #A020F0;
 }
 
 .reset-button {
