@@ -1,4 +1,4 @@
-const CACHE_NAME = "checklist-cache-v1";
+const CACHE_NAME = "checklist-cache-v3";
 
 const FILES_TO_CACHE = [
   "./",
