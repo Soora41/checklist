@@ -1,10 +1,10 @@
-const CACHE_NAME = "checklist-cache-v10";
+const CACHE_NAME = "checklist-cache-v11";
 
 const FILES_TO_CACHE = [
   "./",
   "./index.html",
   "./manifest.json",
-  "./icons/checkmarx.svg"
+  "./icons/checklist.png"
 ];
 
 self.addEventListener("install", event => {
