@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist – Progresso Diário</title>
+
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="icons/checkmarx.svg">
+
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="icons/checkmarx.svg">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container fade-in">
+
+        <h1 class="title glow">Checklist</h1>
+        <p class="subtitle">Seu progresso diário • versão premium</p>
+
+        <!-- Barra de progresso semanal -->
+        <div class="weekly-progress card glass">
+            <p>Progresso da Semana</p>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="weekProgress"></div>
+            </div>
+            <p class="progress-text"><span id="weekPercent">0</span>%</p>
+        </div>
+
+        <!-- CHECKLIST -->
+        <div class="task card glass">
+            <input type="checkbox" id="t1">
+            <label for="t1">Estudar 1h de programação</label>
+        </div>
+
+        <div class="task card glass">
+            <input type="checkbox" id="t2">
+            <label for="t2">Projeto pessoal (mín. 30 min)</label>
+        </div>
+
+        <div class="task card glass">
+            <input type="checkbox" id="t3">
+            <label for="t3">Revisar progresso semanal</label>
+        </div>
+
+        <!-- XP -->
+        <div class="xp-display card glass">
+            <p>XP Total</p>
+            <h2 id="xpValue">0 XP</h2>
+        </div>
+
+        <!-- Conquistas -->
+        <h2 class="section-title">Conquistas</h2>
+        <div id="achievementsContainer" class="achievements-box"></div>
+
+        <!-- Botão -->
+        <button class="reset-button" onclick="fullReset()">Resetar Tudo</button>
+
+    </div>
+
+    <script src="app.js"></script>
+    <script src="achievements.js"></script>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+    </script>
+
+</body>
+</html>
